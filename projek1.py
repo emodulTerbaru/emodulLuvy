@@ -243,7 +243,7 @@ def sebelum():
     st.write("Kuadrat")
     st.latex("a^{2}=a\\times{a}")
     st.markdown("Contoh: Berapakah $4^{2}$")
-    hasil = st.text_input("Masukan jawaban perpangkatan")
+    hasil = st.text_input("Masukan jawaban perpangkatan",value="")
     if hasil:
         if int(hasil)==16:
             st.session_state.penilaian3['jwb1']=50
@@ -253,7 +253,7 @@ def sebelum():
     st.write("Akar Kuadrat")
     st.latex("\sqrt{b} = b\\;bilangan\\;jika\\;dikuadratkan\\;menghasilkan")
     st.markdown("Contoh: Berapakah $\sqrt{25}$")
-    hasil1 = st.text_input("Masukan jawaban akar")
+    hasil1 = st.text_input("Masukan jawaban akar",value="")
     if hasil1:
         if int(hasil1)==5:
             st.session_state.penilaian3['jwb2']=50
@@ -291,13 +291,13 @@ def sebelum():
     st.write("🔹 B. Perpangkatan")
     st.write("Hitunglah:")
     st.markdown("a. $6^{2}$")
-    st.session_state.penilaian2['jwb2']=st.text_input("Jawaban pertama")
+    st.session_state.penilaian2['jwb2']=st.text_input("Jawaban pertama",value="")
     st.markdown("a. $9^{2}$")
-    st.session_state.penilaian2['jwb3']=st.text_input("Jawaban kedua")
+    st.session_state.penilaian2['jwb3']=st.text_input("Jawaban kedua",value)
     st.markdown("a. $\sqrt{49}$")
-    st.session_state.penilaian2['jwb4']=st.text_input("Jawaban ketiga")
+    st.session_state.penilaian2['jwb4']=st.text_input("Jawaban ketiga",value="")
     st.markdown("a. $\sqrt{121}$")
-    st.session_state.penilaian2['jwb5']=st.text_input("Jawaban keempat")
+    st.session_state.penilaian2['jwb5']=st.text_input("Jawaban keempat",value="")
 
     evaluasi = st.button("Evaluasi")
     if evaluasi:
@@ -1082,3 +1082,4 @@ if st.session_state.kumpulanH['kondisi10']:
         st.session_state.diskusian = True
         st.session_state.prasyaratan = False
         st.rerun()
+
