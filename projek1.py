@@ -293,7 +293,7 @@ def sebelum():
     st.markdown("a. $6^{2}$")
     st.session_state.penilaian2['jwb2']=st.text_input("Jawaban pertama",value="")
     st.markdown("a. $9^{2}$")
-    st.session_state.penilaian2['jwb3']=st.text_input("Jawaban kedua",value)
+    st.session_state.penilaian2['jwb3']=st.text_input("Jawaban kedua",value="")
     st.markdown("a. $\sqrt{49}$")
     st.session_state.penilaian2['jwb4']=st.text_input("Jawaban ketiga",value="")
     st.markdown("a. $\sqrt{121}$")
@@ -1082,4 +1082,5 @@ if st.session_state.kumpulanH['kondisi10']:
         st.session_state.diskusian = True
         st.session_state.prasyaratan = False
         st.rerun()
+
 
