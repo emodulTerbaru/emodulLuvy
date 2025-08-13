@@ -783,7 +783,7 @@ def persoalan1():
     st.markdown('''
     <iframe scrolling="no" title="Konsep pythagoras2"
     src="https://www.geogebra.org/material/iframe/id/awn2pqwc/width/1341/height/531/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai
-    /false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="657px" height="265px" style="border:0px;"> </iframe>
+    /false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="100%" height="280px;" style="border:0px;"> </iframe>
     ''',unsafe_allow_html=True)
     st.subheader("Soal")
     st.markdown("""
