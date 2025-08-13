@@ -162,17 +162,17 @@ def sebelum():
     with st.expander("Jenis-jenis Segitiga"):
         st.image("https://res.cloudinary.com/ikip-siliwangi/image/upload/v1754557074/jenis_segitiga_o2zqej.png",width=1000)
     st.write("Segitiga berdasarkan sudut:")
-    isi1 = st.radio("1. Ada 1 sudut 90 derajat",("A. Tumpul","B. Siku-siku","C. Lancip"))
+    isi1 = st.radio("1. Ada 1 sudut 90 derajat",("A. Tumpul","B. Siku-siku","C. Lancip"),index=None)
     if isi1=="B. Siku-siku":
         st.session_state.penilaian1['jwb1'] = 16
     else:
         st.session_state.penilaian1['jwb1'] = 0
-    isi2 = st.radio("2. semua sudut kurang 90 derajat",("A. Tumpul","B. Siku-siku","C. Lancip"))
+    isi2 = st.radio("2. semua sudut kurang 90 derajat",("A. Tumpul","B. Siku-siku","C. Lancip"),index=None)
     if isi2=="C. Lancip":
         st.session_state.penilaian1['jwb2'] = 17
     else:
         st.session_state.penilaian1['jwb2'] = 0
-    isi3 = st.radio("3. Ada 1 sudut lebih 90 derajat",("A. Tumpul","B. Siku-siku","C. Lancip"))
+    isi3 = st.radio("3. Ada 1 sudut lebih 90 derajat",("A. Tumpul","B. Siku-siku","C. Lancip"),index=None)
     if isi3=="A. Tumpul":
         st.session_state.penilaian1['jwb3'] = 17
     else:
@@ -180,17 +180,17 @@ def sebelum():
     st.write("Segitiga berdasarkan sisi:")
     with st.expander("Segitiga berdasarkan sisi"):
         st.image("https://res.cloudinary.com/ikip-siliwangi/image/upload/v1754558768/segitiga_sisi_uof2uq.png",width=1000)
-    isi4 = st.radio("1. Segitiga memiliki semua sisi yang panjangnya sama",("A. sama kaki","B. sama sisi","C. sembarang"))
+    isi4 = st.radio("1. Segitiga memiliki semua sisi yang panjangnya sama",("A. sama kaki","B. sama sisi","C. sembarang"),index=None)
     if isi4=="B. sama sisi":
         st.session_state.penilaian1['jwb4'] = 16
     else:
         st.session_state.penilaian1['jwb4'] = 0
-    isi5 = st.radio("2. Segitiga yang memiliki 2 garis yang sama panjang",("A. sembarang","B. sama sisi","C. sama kaki"))
+    isi5 = st.radio("2. Segitiga yang memiliki 2 garis yang sama panjang",("A. sembarang","B. sama sisi","C. sama kaki"),index=None)
     if isi5=="C. sama kaki":
         st.session_state.penilaian1['jwb5'] = 17
     else:
         st.session_state.penilaian1['jwb5'] = 0
-    isi6 = st.radio("3. Segitiga yang semua sisinya tidak sama panjang",("A. Sembarang","B. sama kaki","C. sama sisi"))
+    isi6 = st.radio("3. Segitiga yang semua sisinya tidak sama panjang",("A. Sembarang","B. sama kaki","C. sama sisi"),index=None)
     if isi6=="A. Sembarang":
         st.session_state.penilaian1['jwb6'] = 17
     else:
@@ -1082,5 +1082,4 @@ if st.session_state.kumpulanH['kondisi10']:
         st.session_state.diskusian = True
         st.session_state.prasyaratan = False
         st.rerun()
-
 
