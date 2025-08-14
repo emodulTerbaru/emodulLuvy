@@ -8,7 +8,7 @@ import io
 import requests
 
 
-
+st.set_page_config(layout="wide")
 st.title("Pythagoras")
 
 if "coba" not in st.session_state:
@@ -1046,6 +1046,7 @@ if st.session_state.kumpulanH['kondisi10']:
         st.session_state.diskusian = True
         st.session_state.prasyaratan = False
         st.rerun()
+
 
 
 
