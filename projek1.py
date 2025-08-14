@@ -878,7 +878,7 @@ def persoalan2():
     <title>Document</title>
     <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
     <script>
-        var params = {"id":"ggbApplet","appName": "classic", "width": 600, "height": 400, "showToolBar": true, "showAlgebraInput": false, "showMenuBar": false };
+        var params = {"id":"ggbApplet","appName": "classic", "width": 1200, "height": 800, "showToolBar": true, "showAlgebraInput": false, "showMenuBar": false };
         var applet = new GGBApplet('5.0',params);
         window.onload=function(){
             applet.inject('ggb-element')
@@ -893,7 +893,7 @@ def persoalan2():
     </body>
     </html>
     '''
-    components.html(kode_html1,height=1000)
+    components.html(kode_html1,height=1000, width=1200)
 if st.session_state.coba1:
     persoalan2()
 
@@ -1046,6 +1046,7 @@ if st.session_state.kumpulanH['kondisi10']:
         st.session_state.diskusian = True
         st.session_state.prasyaratan = False
         st.rerun()
+
 
 
 
