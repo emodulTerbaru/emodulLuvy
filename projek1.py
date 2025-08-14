@@ -113,7 +113,7 @@ st.markdown("""
 soal_masalah = {"soal1":{"pert":["Sebuah segitiga siku-siku memiliki panjang alas 6 cm dan tinggi 8 cm. Berapa panjang sisi miringnya?",
                                  "Panjang sisi miring sebuah segitiga adalah 13 cm, dan salah satu sisi lainnya 5 cm. Hitung panjang sisi yang belum diketahui.",
                                  "Diketahui panjang sisi siku-siku adalah 9 cm dan 12 cm. Hitung panjang sisi miring.",
-                                 "Seorang siswa mengukur tiang dan menemukan bahwa jarak dari dasar tiang ke ujung bayangan adalah 15 meter, dan tinggi tiang adalah 9 meter. Berapa panjang bayangannya?",
+                                 "Seorang siswa mengukur tiang dan menemukan bahwa jarak dari ujung tiang ke ujung bayangan adalah 15 meter, dan tinggi tiang adalah 9 meter. Berapa panjang bayangannya?",
                                  "Diberikan tiga sisi segitiga: 7 cm, 24 cm, dan 25 cm. Apakah segitiga tersebut merupakan segitiga siku-siku? (tulis 0 jika tidak, tulis 1 jika ya",
                                  "Sebuah tangga sepanjang 10 m disandarkan ke tembok dan membentuk sudut siku-siku dengan tanah. Jika jarak kaki tangga ke tembok adalah 6 m, berapa tinggi tembok?",
                                  "Di taman, seorang anak berjalan 5 m ke timur, lalu 12 m ke utara. Jika ia memotong langsung ke titik awal, berapa meter jarak yang ditempuhnya?",
@@ -1046,4 +1046,5 @@ if st.session_state.kumpulanH['kondisi10']:
         st.session_state.diskusian = True
         st.session_state.prasyaratan = False
         st.rerun()
+
 
