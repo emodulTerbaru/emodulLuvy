@@ -780,11 +780,46 @@ def persoalan1():
                 ### "Hmm, petunjuk berikutnya mengatakan kita perlu mengetahui jarak terpendek dari pohon ke sungai. Tapi pohon mana? Dan bagaimana cara menghitungnya? tanya Wati bingung.
             """)
     # Sisipkan HTML untuk GeoGebra Applet
-    st.markdown('''
-    <iframe scrolling="no" title="Konsep pythagoras2"
-    src="https://www.geogebra.org/material/iframe/id/awn2pqwc/width/1341/height/531/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai
-    /false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="100%" height="280px;" style="border:0px;"> </iframe>
-    ''',unsafe_allow_html=True)
+    html_code = """
+<div id="geogebra-container"></div>
+
+<script src="https://www.geogebra.org/scripts/deployggb.js"></script>
+<script>
+  var ggbApp = new GGBApplet({
+    "appName": "classic",
+    "width": 1300,
+    "height": 550,
+    "material_id": "wmkfatpf",  // Ganti dengan material_id kamu
+    "showToolBar": false,
+    "showAlgebraInput": false,
+    "enableShiftDragZoom": false,
+    "enableRightClick": false,
+    "enableLabelDrags": false,
+    "enableZoomButtons": false,
+    "showMenuBar": false,
+    "showResetIcon": false
+  }, true);
+
+  window.onload = function () {
+    ggbApp.inject('geogebra-container');
+
+    // Pastikan objek siap sebelum setCoordSystem
+    let attempts = 0;
+    const trySetView = setInterval(() => {
+      try {
+        const app = ggbApp.getAppletObject();
+        if (app && typeof app.setCoordSystem === "function") {
+          app.setCoordSystem(-5, 35, -5, 20);
+          clearInterval(trySetView);
+        }
+      } catch (e) {}
+      if (++attempts > 20) clearInterval(trySetView);
+    }, 300);
+  };
+</script>
+"""
+    # Tampilkan di Streamlit
+    components.html(html_code, height=600, width=1200)
     st.subheader("Soal")
     st.markdown("""
     <div class="para" style="background-color:cyan;box-shadow:-2px -2px 2px 2px red, 2px 2px 2px 2px green">
@@ -1046,6 +1081,7 @@ if st.session_state.kumpulanH['kondisi10']:
         st.session_state.diskusian = True
         st.session_state.prasyaratan = False
         st.rerun()
+
 
 
 
