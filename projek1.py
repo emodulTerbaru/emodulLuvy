@@ -819,7 +819,7 @@ def persoalan1():
 </script>
 """
     # Tampilkan di Streamlit
-    components.html(html_code, height=600, width=1200)
+    components.html(html_code, height=400, width=1200)
     st.subheader("Soal")
     st.markdown("""
     <div class="para" style="background-color:cyan;box-shadow:-2px -2px 2px 2px red, 2px 2px 2px 2px green">
@@ -1081,6 +1081,7 @@ if st.session_state.kumpulanH['kondisi10']:
         st.session_state.diskusian = True
         st.session_state.prasyaratan = False
         st.rerun()
+
 
 
 
