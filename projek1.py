@@ -723,8 +723,8 @@ def gambaran():
         stroke_width=3,
         stroke_color="#000000",
         background_color="#ffffff",
-        height=300,
-        width=400,
+        height=400,
+        width=800,
         drawing_mode="freedraw",
         key="canvas",
     )
@@ -1081,6 +1081,7 @@ if st.session_state.kumpulanH['kondisi10']:
         st.session_state.diskusian = True
         st.session_state.prasyaratan = False
         st.rerun()
+
 
 
 
