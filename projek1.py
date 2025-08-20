@@ -928,7 +928,7 @@ def persoalan2():
     </body>
     </html>
     '''
-    components.html(kode_html1,height=800, width=1200)
+    components.html(kode_html1,height=600, width=1200)
 if st.session_state.coba1:
     persoalan2()
 
@@ -1081,6 +1081,7 @@ if st.session_state.kumpulanH['kondisi10']:
         st.session_state.diskusian = True
         st.session_state.prasyaratan = False
         st.rerun()
+
 
 
 
