@@ -6,7 +6,7 @@ import cloudinary
 import cloudinary.uploader
 import io
 import requests
-
+import cloudinary.api
 
 st.set_page_config(layout="wide")
 st.title("Pythagoras")
@@ -747,7 +747,24 @@ def gambaran():
             st.success("Berhasil diupload!")
             st.image(result['secure_url'], caption="Link dari Cloudinary")
             st.write("URL:", result['secure_url'])
+            
+    st.title("Ambil Foto & Upload ke Cloudinary")
+    # --- Ambil foto dari kamera ---
+    img = st.camera_input("Ambil foto")
+    if img is not None:
+        st.image(img, caption="Foto yang diambil", use_column_width=True)
 
+        if st.button("Upload foto Kamera ke Cloudinary"):
+            # Simpan file sementara
+            with open("foto.jpg", "wb") as f:
+                f.write(img.getbuffer())
+
+            # Upload ke Cloudinary
+            upload_result = cloudinary.uploader.upload("foto.jpg")
+
+            st.success("Foto berhasil diunggah!")
+            st.write("URL Cloudinary:", upload_result["secure_url"])
+            st.image(upload_result["secure_url"], caption="Foto di Cloudinary")
 
 def persoalan1():
     st.subheader("Awal Petualangan – Mengukur Jarak Dua Pohon")
@@ -1081,6 +1098,7 @@ if st.session_state.kumpulanH['kondisi10']:
         st.session_state.diskusian = True
         st.session_state.prasyaratan = False
         st.rerun()
+
 
 
 
