@@ -760,7 +760,7 @@ def gambaran():
                 f.write(img.getbuffer())
 
             # Upload ke Cloudinary
-            upload_result = cloudinary.uploader.upload("foto.jpg")
+            upload_result = cloudinary.uploader.upload("foto.jpg",public_id=st.session_state.nama)
 
             st.success("Foto berhasil diunggah!")
             st.write("URL Cloudinary:", upload_result["secure_url"])
@@ -1098,6 +1098,7 @@ if st.session_state.kumpulanH['kondisi10']:
         st.session_state.diskusian = True
         st.session_state.prasyaratan = False
         st.rerun()
+
 
 
 
